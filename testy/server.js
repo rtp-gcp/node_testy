@@ -10,16 +10,17 @@ const fp2Buf = Buffer.from('CKDS@[AKCBEO@N~@@@CQRBKEF@CAKCCET@N~@@@CQRB_DH@JAYCC
 
 server.on('request',(request,response)=>{
    response.writeHead(200,{'Content-Type':'text/plain'});
-   response.write('Hello world');
+   //response.write('Hello world');
    let pbf;
    let ret;
 
    pbf = new pb.Decoder('fp2_29, fp2_29');
-   //ret = pbf.decode(fp2Buf).then(ret => { ret.rows});
-   pbf.decode(fp2Buf).then(ret => { ret.rows});
-   response.write(ret);
+   ret = pbf.decode(fp2Buf);
+   ret.then((val) => {
+    response.write(val.rows.toString());
+    response.end();
+   });
 
-   response.end();
 });
 
 server.listen(3000,()=>{
