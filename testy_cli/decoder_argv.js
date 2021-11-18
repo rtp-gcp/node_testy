@@ -30,6 +30,8 @@ let ret;
 
 // this should decode it and print the result
 pbf = new pb.Decoder('fp2_29, fp2_29');
+console.log("the input buffer is ");
+console.log(the_buffer);
 ret = pbf.decode(the_buffer);
 ret.then((val) => {
         console.log(val.rows.toString());
