@@ -14,8 +14,9 @@ server.on('request',(request,response)=>{
    let pbf;
    let ret;
 
-   pbf = new pb.Decoder('fp2_29, fp2_29')
-   ret = pbf.decode(fp2Buf);
+   pbf = new pb.Decoder('fp2_29, fp2_29');
+   //ret = pbf.decode(fp2Buf).then(ret => { ret.rows});
+   pbf.decode(fp2Buf).then(ret => { ret.rows});
    response.write(ret);
 
    response.end();
