@@ -15,26 +15,25 @@ readline.question('Enter input buffer ', (input_buffer) => {
 
     let pbf;
     let ret;
+    let fp2Buf;
 
     // this will dump the buffer we resoond with 
     //console.log(input_buffer);
 
     // this should decode it and print the result
     pbf = new pb.Decoder('fp2_29, fp2_29');
-    ret = pbf.decode(input_buffer);
+    fp2Buf = Buffer.from(input_buffer,'ascii')
+    ret = pbf.decode(fp2Buf);
     ret.then((val) => {
         console.log(val.rows.toString());
     });
     readline.close();
 });
 
-//console.log('hey ');
-//console.log(input_buffer);
 
 
 
 
 
-//  readline.close();
 
 

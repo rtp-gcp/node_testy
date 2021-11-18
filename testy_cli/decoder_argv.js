@@ -1,5 +1,7 @@
 
-// const fp2Buf = Buffer.from('CKDS@[AKCBEO@N~@@@CQRBKEF@CAKCCET@N~@@@CQRB_DH@JAYCCEZ@N}@@@CQRB`DD@BAYCDE`@N}@@@CQRB[DK@KAICCEB@N}@@@CQRBTEF@NBOCCEE@N}@@@CQRBVCN@KBKCEEL@N~@@@CQRBFED@NAZCCEI@N}@@@CQRBFBN@IANCDEB@N~@@@CQRBTCR@KASCFED@N~@@@CQRCADL@MBMCDET@N~@@@CQRB}DW@]AICDE~@N~@@@CQRBG','ascii')
+// NOTE: This is a cool demo,  but the pseudo binary string has some characters which break the cli.  Specifically the
+// ' marks are interpeted as a string to execute.  Use the readline version instead.
+//
 
 
 // run like so:
@@ -35,8 +37,8 @@ let buffer_two = Buffer.from(the_buffer)
 pbf = new pb.Decoder('fp2_29, fp2_29');
 //console.log("the input buffer is ");
 //console.log(the_buffer);
-console.log("buffer_two is ");
-console.log(buffer_two);
+//console.log("buffer_two is ");
+//console.log(buffer_two);
 ret = pbf.decode(buffer_two);
 ret.then((val) => {
         console.log(val.rows.toString());
