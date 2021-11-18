@@ -1,4 +1,5 @@
 
+// const fp2Buf = Buffer.from('CKDS@[AKCBEO@N~@@@CQRBKEF@CAKCCET@N~@@@CQRB_DH@JAYCCEZ@N}@@@CQRB`DD@BAYCDE`@N}@@@CQRB[DK@KAICCEB@N}@@@CQRBTEF@NBOCCEE@N}@@@CQRBVCN@KBKCEEL@N~@@@CQRBFED@NAZCCEI@N}@@@CQRBFBN@IANCDEB@N~@@@CQRBTCR@KASCFED@N~@@@CQRCADL@MBMCDET@N~@@@CQRB}DW@]AICDE~@N~@@@CQRBG','ascii')
 
 
 // run like so:
@@ -15,8 +16,8 @@ const pb = require('@dendra-science/goes-pseudo-binary');
 
 
 // Show the command line args.
-// index 2 is first thing past 'node decoder_argv.js xxxx'
-// ie. the xxx part
+// index 2 is first thing past the script argument 'node decoder_argv.js xxxx'
+// ie. arg index 2 is the xxx part
 process.argv.forEach((val, index) =>
 {
     console.log( `${index}: ${val}`);
@@ -28,11 +29,15 @@ const [node, script_name, the_buffer] = process.argv;
 let pbf;
 let ret;
 
+let buffer_two = Buffer.from(the_buffer)
+
 // this should decode it and print the result
 pbf = new pb.Decoder('fp2_29, fp2_29');
-console.log("the input buffer is ");
-console.log(the_buffer);
-ret = pbf.decode(the_buffer);
+//console.log("the input buffer is ");
+//console.log(the_buffer);
+console.log("buffer_two is ");
+console.log(buffer_two);
+ret = pbf.decode(buffer_two);
 ret.then((val) => {
         console.log(val.rows.toString());
 });
