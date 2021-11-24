@@ -1,35 +1,29 @@
-# how to use node
+# This code use browserfy
 
 ```
 mkdir foo
 cd foo
 npm init
-it will make a package.json file
-vi server.js
-add this
-
-//server.js
-const http = require('http'),
-      server = http.createServer();
-
-server.on('request',(request,response)=>{
-   response.writeHead(200,{'Content-Type':'text/plain'});
-   response.write('Hello world');
-   response.end();
-});
-
-server.listen(3000,()=>{
-  console.log('Node server created at port 3000');
-});
-
-node server.js
-
-open browser to localhost:3000
-
 npm install @dendra-science/goes-pseudo-binary
 
 
-# script.js vs server.js
+# The script.js code uses node
 
-If you use the web browser to load index.html as a file, it will load styles.css and script.js.
-However, this will not permit the goes binary lib load.
+As a result, you need an ability to permit node require() command to be done in a browser which
+does not run node.  Consquently, use the browserfy tool to convert the js code into node.js code.
+
+That is a novice thing to say, but it has something to do with modules yadda yadda yadda.
+
+In order to bundle the scripts, you need to install browserfy
+
+```
+$ sudo npm install -g browserify
+```
+
+Build the bundle.js from the script.js using the makefile.  It is basically a wrapper like so
+
+```
+$ browserify script.js -o bundle.js
+```
+
+Include the bundle.js in the HTML file.
