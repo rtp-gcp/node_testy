@@ -1,5 +1,9 @@
 # This code use browserfy
 
+
+![../../pics/goes_ss.png]
+
+
 ```
 mkdir foo
 cd foo
