@@ -107,4 +107,5 @@ dist
 # JFD mods
 libs/goes-pseudo-binary/
 package-lock.json
+*.swp
 

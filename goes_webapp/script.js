@@ -31,10 +31,56 @@
 //});
 
 
+class GoesDecoder {
+    constructor(format, buffer, decoder) {
+        console.log("GoesDecoder() ");
+        this.formatInput = format
+        this.bufferInput = buffer
+        this.decoderOutput = decoder
+        this.clear()
+    }
 
-// script.js
-//const allClearButton = document.querySelector('[data-all-clear]')
-//const currentOperandTextElement = document.querySelector('[data-current-operand]')
+    clear() {
+        console.log("clear() ");
+        //this.format = ''
+        //this.buffer = ''
+    }
+
+    performDecode() {
+        console.log("performDecode() ");
+    }
+
+    updateDisplay() {
+        console.log("updateDisplay() ");
+        this.formatInput.value = ''
+        this.bufferInput.value = ''
+        this.decoderOutput.value = ''
+    }
+}
+
+// Get reference to HTML elements
+// button
+const allClearButton = document.querySelector('[ac-button]')
+const decodeButton = document.querySelector('[decode-button]')
+// text areas
+const formatElement = document.querySelector('[format-ta]')
+const bufferElement = document.querySelector('[buffer-ta]')
+const decoderElement = document.querySelector('[output-ta]')
+
+// Build class with some of these specified?
+const goesdecoder = new GoesDecoder(formatElement, bufferElement, decoderElement)
+
+// Hook an event listener for the AC button
+allClearButton.addEventListener('click', button => {
+    goesdecoder.clear()
+    goesdecoder.updateDisplay()
+})
+
+// Hook an event listener for the Decode button
+decodeButton.addEventListener('click', button => {
+    goesdecoder.performDecode()
+})
 
 
-//const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
+
