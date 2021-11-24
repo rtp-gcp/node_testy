@@ -1,7 +1,10 @@
 # This code use browserfy
 
+[![alt text][1]][2]
 
-![../../pics/goes_ss.png]
+[1]: https://github.com/rtp-gcp/node_testy/blob/main/pics/goes_ss.png
+[2]: https://www.timeanddate.com/astronomy/moon/light.html?month=3&day=20&year=2040&hour=19&min=00&sec=0&n=64&ntxt=Chicago&earth=0
+
 
 
 ```
