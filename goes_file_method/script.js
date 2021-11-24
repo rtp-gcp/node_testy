@@ -30,7 +30,6 @@
 //  console.log('Node server created at port 3000');
 //});
 
-//const pb = require('./pb')
 
 class GoesDecoder {
     constructor(format, buffer, decoder) {
