@@ -27,3 +27,12 @@ $ browserify script.js -o bundle.js
 ```
 
 Include the bundle.js in the HTML file.
+
+
+# CSS reference
+
+w3.schools or whatever it is  called, is not as nice as this reference
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end
+
+
