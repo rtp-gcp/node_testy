@@ -8,7 +8,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom, #00FF6C, #00AAFF);
+    background: linear-gradient(to bottom, #00FF6C, #00AACF);
 }
 
 /* grid-template-columns  1fr means this col is 1 flex factor, it takes that proportion
@@ -40,19 +40,20 @@ body {
 }
 
 .format-ta {
-    justify-content: left;
-    grid-column: 1/5;
+    grid-column-start: 1;
+    grid-column-end: span 4;
     grid-row: 2;
 }
 
 
 .buffer-label {
-    grid-column: 1/5;
+    grid-column: span 5;
     grid-row: 3;
 }
 
 .buffer-ta {
-    grid-column: 1/5;
+    grid-column-start: 1;
+    grid-column-end: span 4;
     grid-row: 4;
 }
 
@@ -63,7 +64,8 @@ body {
 }
 
 .output-ta {
-    grid-column: 1/5;
+    grid-column-start: 1;
+    grid-column-end: span 4;
     grid-row: 6;
 }
 
