@@ -12,6 +12,7 @@ mkdir foo
 cd foo
 npm init
 npm install @dendra-science/goes-pseudo-binary
+```
 
 
 # The script.js code uses node
