@@ -22,6 +22,8 @@ does not run node.  Consquently, use the browserfy tool to convert the js code i
 
 That is a novice thing to say, but it has something to do with modules yadda yadda yadda.
 
+See here for more: https://browserify.org/
+
 In order to bundle the scripts, you need to install browserfy
 
 ```
