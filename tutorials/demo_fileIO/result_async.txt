@@ -1,0 +1,4 @@
+Here is the result: ==== Begin contents one.txt  ===
+==== End contents one.txt ===
+, ==== Begin contents two.txt  ===
+==== End contents two.txt ===

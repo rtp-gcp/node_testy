@@ -1,0 +1,2 @@
+==== Begin contents two.txt  ===
+==== End contents two.txt ===
