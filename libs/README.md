@@ -12,6 +12,7 @@ Navigate to this url to git clone the lib
 https://github.com/DendraScience/goes-pseudo-binary
 
 ```
+$ git clone git@github.com:DendraScience/goes-pseudo-binary.git
 $ cd goes-pseudo-binary
 $ npm install .
 $ npm audit fix
