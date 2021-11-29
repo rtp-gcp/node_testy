@@ -8,8 +8,13 @@ const app = express()
 app.set("view engine", "ejs")
 
 // use this for public?
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/Public'));
+//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + 'public'));
+//app.use(express.static(__dirname + '/Public'));
+//app.use(express.static(__dirname + '/Public'));
+//app.use(express.static(__dirname + 'Public'));
+//app.use(express.static(__dirname + 'public'));
+//app.use(express.static('public'));
 
 // setup a route
 // get has two parameters - the second is 
