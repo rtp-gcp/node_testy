@@ -1,0 +1,65 @@
+
+
+const pb = require('@dendra-science/goes-pseudo-binary');
+
+
+class GoesDecoder {
+    constructor(format, buffer, decoder) {
+        console.log("GoesDecoder() ");
+        this.formatInput = format
+        this.bufferInput = buffer
+        this.decoderOutput = decoder
+
+        // Add some default values
+        this.formatInput.value = 'fp2_29,fp2_29'
+        this.bufferInput.value = 'CKDS@[AKCBEO@N~@@@CQRBKEF@CAKCCET@N~@@@CQRB_DH@JAYCCEZ@N}@@@CQRB`DD@BAYCDE`@N}@@@CQRB[DK@KAICCEB@N}@@@CQRBTEF@NBOCCEE@N}@@@CQRBVCN@KBKCEEL@N~@@@CQRBFED@NAZCCEI@N}@@@CQRBFBN@IANCDEB@N~@@@CQRBTCR@KASCFED@N~@@@CQRCADL@MBMCDET@N~@@@CQRB}DW@]AICDE~@N~@@@CQRBG'
+        this.decoderOutput.value = ''
+    }
+
+    clear() {
+        console.log("clear() ");
+        this.formatInput.value = ''
+        this.bufferInput.value = ''
+        this.decoderOutput.value = ''
+    }
+
+    performDecode() {
+        console.log("performDecode() ");
+        let pbf;
+        let ret;
+
+        const fp2Buf = Buffer.from(this.bufferInput.value,'ascii')
+        pbf = new pb.Decoder(this.formatInput.value);
+        ret = pbf.decode(fp2Buf);
+        ret.then((val) => {
+            this.decoderOutput.value = val.rows.toString();
+        });
+    }
+
+}
+
+// Get reference to HTML elements
+// button
+const allClearButton = document.querySelector('[ac-button]')
+const decodeButton = document.querySelector('[decode-button]')
+// text areas
+const formatElement = document.querySelector('[format-ta]')
+const bufferElement = document.querySelector('[buffer-ta]')
+const decoderElement = document.querySelector('[output-ta]')
+
+// Build class with some of these specified?
+const goesdecoder = new GoesDecoder(formatElement, bufferElement, decoderElement)
+
+// Hook an event listener for the AC button
+allClearButton.addEventListener('click', button => {
+    goesdecoder.clear()
+})
+
+// Hook an event listener for the Decode button
+decodeButton.addEventListener('click', button => {
+    goesdecoder.performDecode()
+})
+
+
+
+
