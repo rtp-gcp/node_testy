@@ -8,13 +8,22 @@ const app = express()
 app.set("view engine", "ejs")
 
 // use this for public?
+app.use(express.static('public'));
+
+// Another guy on slack said these styles do not work
+//app.use(express.static(__dirname + 'public'));
+//app.use(express.static(__dirname + '/public'));
 //app.use(express.static(__dirname + '/public'));
 //app.use(express.static(__dirname + 'public'));
 //app.use(express.static(__dirname + '/Public'));
 //app.use(express.static(__dirname + '/Public'));
 //app.use(express.static(__dirname + 'Public'));
 //app.use(express.static(__dirname + 'public'));
-app.use(express.static('public'));
+
+/*
+    <link rel="stylesheet" type="text/css" href="css/styles.css">                              JFD server.js
+        <link rel="stylesheet" type="text/css" href="styles.css">      
+ */
 
 // setup a route
 // get has two parameters - the second is 
