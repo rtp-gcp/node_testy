@@ -9,6 +9,7 @@ npm init -y
 npm install express
 npm install --save-dev nodemon
 npm install @dendra-science/goes-pseudo-binary
+npm i ejs
 ```
 
 # First Steps - setup nodemon
@@ -44,7 +45,10 @@ the current directory.)
 $ npm run devStart
 ```
 
-
+# browserfy
+This code uses browserfy.  The makefile will take the `public/js/script.js` and
+converts it to `public/js/bundle.js`.  The `views/index.ejs` references 
+the `bundle.js`
 
 
 # CSS reference
