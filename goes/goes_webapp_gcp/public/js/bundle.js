@@ -652,6 +652,15 @@ class GoesDecoder {
 }
 
 // Get reference to HTML elements
+//
+// querySelector() returns the first Element within document that
+// matches the specified selector or group.  A selector is a 
+// DOMString containing one or more selectors to match (hence
+// the array syntax
+//
+// querySelectorAll() returns all elements ...
+//
+// 
 // button
 const allClearButton = document.querySelector('[ac-button]')
 const decodeButton = document.querySelector('[decode-button]')
