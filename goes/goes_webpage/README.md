@@ -11,7 +11,10 @@ npm install --save-dev nodemon
 npm install @dendra-science/goes-pseudo-binary
 ```
 
-# First Steps
+# First Steps - setup nodemon
+Nodemon allows for the server to restart when a file is modified.
+
+
 Modify the package.json so that the existing script is removed and replace with as shown
 
 before
@@ -32,7 +35,10 @@ after
 ```
 Create a file named server.js. Don't worry aboutindex.js for now
 
-# Auto rerun npm using nodemon detecting file writes?
+## Auto rerun code changes
+Rather than type `npm start` or `node server.js`, use nodemon to restart the 
+server each time a file write occurs.  (It seems it monitors the file system below
+the current directory.)
 
 ```
 $ npm run devStart
