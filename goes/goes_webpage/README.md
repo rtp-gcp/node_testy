@@ -86,7 +86,11 @@ Other hotkeys
 *`ctrl-a c` Create a new screen
 *`ctrl-d` Delete a screen
 
+Screen interactive commands
 
+Type `ctrl a :` to enter an interactive command.
+
+Type `:resize 20%` to resize the current screen to be 30% of total available space.
 
 
 
