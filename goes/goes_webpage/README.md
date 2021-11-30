@@ -1,13 +1,43 @@
-# 
+# Install 
 
-
+Steps to install
 
 ```
-mkdir foo
-cd foo
-npm init
+mkdir goes_webapp
+cd goes_webapp
+npm init -y
+npm install express
+npm install --save-dev nodemon
 npm install @dendra-science/goes-pseudo-binary
 ```
+
+# First Steps
+Modify the package.json so that the existing script is removed and replace with as shown
+
+before
+```
+
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+
+
+after
+```
+
+ "scripts": {
+    "devStart": "nodemon server.js"
+  },
+```
+Create a file named server.js. Don't worry aboutindex.js for now
+
+# Auto rerun npm using nodemon detecting file writes?
+
+```
+$ npm run devStart
+```
+
 
 
 
