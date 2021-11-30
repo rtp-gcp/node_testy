@@ -55,6 +55,34 @@ https://github.com/kevin-powell/learn-grid-the-easy-way
 # button reference
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
 
+# Aside: Screen reference
+
+Start a screen session
+```
+$ screen
+```
+
+Create a Side by Side Split   
+
+```
+ctrl-a shift-\   
+```
+
+
+Create a Stacked Split
+
+```
+CTRL-a shift s
+```
+
+Other hotkeys
+*`ctrl-a tab` Switch focus to next screen
+*`ctrl-a c` Create a new screen
+*`ctrl-d` Delete a screen
+
+
+
+
 
 
 
