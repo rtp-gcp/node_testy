@@ -50,6 +50,17 @@ This code uses browserfy.  The makefile will take the `public/js/script.js` and
 converts it to `public/js/bundle.js`.  The `views/index.ejs` references 
 the `bundle.js`
 
+# GCP
+
+What about `gcloud app update`?  Everytime I make a change it does not update?
+
+1. `create app.yaml`
+2. `gcloud init`
+3. `gcloud app deploy`
+4. `gcloud app logs tail -s default`
+5. `gcloud app browse`
+
+
 
 # CSS reference
 

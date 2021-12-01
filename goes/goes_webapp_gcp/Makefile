@@ -4,5 +4,8 @@ public/js/bundle.js: public/js/script.js
 runlocal:
 	npm run devStart
 
+deploy:
+	gcloud app deploy
 
+# what about app update?
 
