@@ -637,15 +637,26 @@ class GoesDecoder {
     }
 
     performDecode() {
-        console.log("performDecode() ");
+        console.log("performDecode()");
         let pbf;
         let ret;
 
         const fp2Buf = Buffer.from(this.bufferInput.value,'ascii')
+        console.log(`format: ${this.formatInput.value}`);
+        console.log(`buffer: ${fp2Buf}`);
         pbf = new pb.Decoder(this.formatInput.value);
         ret = pbf.decode(fp2Buf);
         ret.then((val) => {
-            this.decoderOutput.value = val.rows.toString();
+            console.log(`result: ${val.rows.toString()}`);
+            if (val.rows.toString() === "") {
+                console.log("empty string");
+                this.decoderOutput.value = "invalid format/buffer combination";
+            } else {
+                console.log("non empty string");
+                console.log(`val = ${val}`);
+                console.log(`val.rows = ${val.rows}`);
+                this.decoderOutput.value = val.rows.toString();
+            }
         });
     }
 
