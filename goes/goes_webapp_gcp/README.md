@@ -10,6 +10,7 @@ npm install express
 npm install --save-dev nodemon
 npm install @dendra-science/goes-pseudo-binary
 npm i ejs
+npm install -g browserify
 ```
 
 # First Steps - setup nodemon
@@ -108,6 +109,10 @@ Type `ctrl a :` to enter an interactive command.
 Type `:resize 20%` to resize the current screen to be 30% of total available space.
 
 
+# Appendix Install nodejs
+```
+https://nodejs.org/en/download/current/
+```
 
 
 

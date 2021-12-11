@@ -1,20 +1,30 @@
 {
   "name": "goes_webpage",
   "version": "1.0.0",
-  "description": "",
+  "description": "Steps to install",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "John F. Davis",
+  "license": "MIT",
   "dependencies": {
     "@dendra-science/goes-pseudo-binary": "^0.1.0",
+    "browserfy": "^1.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rtp-gcp/node_testy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rtp-gcp/node_testy/issues"
+  },
+  "homepage": "https://github.com/rtp-gcp/node_testy#readme"
 }
