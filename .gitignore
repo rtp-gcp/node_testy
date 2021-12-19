@@ -108,4 +108,4 @@ dist
 libs/goes-pseudo-binary/
 package-lock.json
 *.swp
-
+*.zip
