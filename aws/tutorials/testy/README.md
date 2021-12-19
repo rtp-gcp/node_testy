@@ -9,3 +9,7 @@ This app uses the "sample application" radio button selection for "Application c
 4. Choose the sample application radio button
 5. click create3 application
 
+# seeing the app in action
+After the app is deployed via create appliction, click below the environment for the link to see the app
+
+
