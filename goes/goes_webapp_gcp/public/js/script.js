@@ -82,6 +82,11 @@ decodeButton.addEventListener('click', button => {
     goesdecoder.performDecode()
 })
 
-
-
+const formatEditBox = document.getElementsByClassName("textarea_e")[0];
+formatEditBox.addEventListener("keyup",function(event) {
+    if (event.key === "Enter") {
+        //console.log("yo")
+        goesdecoder.performDecode()
+    }
+});
 
