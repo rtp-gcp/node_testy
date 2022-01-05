@@ -22,6 +22,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
 
     console.log("get /")
+    console.log(req)
 
     //res.sendStatus(500) // error on server
     // or
@@ -39,8 +40,37 @@ app.get('/', (req, res) => {
     // or 
     //res.render("index")
     // or add some text 
-    res.render("index", { text: "World" })
+    res.render("index")
 })
+
+
+app.get('/index.ejs', (req, res) => {
+
+    console.log("get /")
+    console.log(req)
+
+    res.render("index")
+})
+
+
+app.get('/notes.ejs', (req, res) => {
+
+    console.log("get /")
+    //console.log(req)
+
+    res.render("notes")
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
