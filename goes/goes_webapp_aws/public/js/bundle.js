@@ -624,8 +624,10 @@ class GoesDecoder {
         this.decoderOutput = decoder
 
         // Add some default values
-        this.formatInput.value = 'fp2_29,fp2_29'
-        this.bufferInput.value = 'CKDS@[AKCBEO@N~@@@CQRBKEF@CAKCCET@N~@@@CQRB_DH@JAYCCEZ@N}@@@CQRB`DD@BAYCDE`@N}@@@CQRB[DK@KAICCEB@N}@@@CQRBTEF@NBOCCEE@N}@@@CQRBVCN@KBKCEEL@N~@@@CQRBFED@NAZCCEI@N}@@@CQRBFBN@IANCDEB@N~@@@CQRBTCR@KASCFED@N~@@@CQRCADL@MBMCDET@N~@@@CQRB}DW@]AICDE~@N~@@@CQRBG'
+        //this.formatInput.value = 'fp2_29,fp2_29'
+        //this.bufferInput.value = 'CKDS@[AKCBEO@N~@@@CQRBKEF@CAKCCET@N~@@@CQRB_DH@JAYCCEZ@N}@@@CQRB`DD@BAYCDE`@N}@@@CQRB[DK@KAICCEB@N}@@@CQRBTEF@NBOCCEE@N}@@@CQRBVCN@KBKCEEL@N~@@@CQRBFED@NAZCCEI@N}@@@CQRBFBN@IANCDEB@N~@@@CQRBTCR@KASCFED@N~@@@CQRCADL@MBMCDET@N~@@@CQRB}DW@]AICDE~@N~@@@CQRBG'
+        this.formatInput.value = 'i_3'
+        this.bufferInput.value = 'AhlAjPAktAmXAn|Ap`ArDAshAuLAvpAxTAyx~WT~Up~TL~Rh~QD~O`~M|~LX~Jt~IP~Gl~FH'
         this.decoderOutput.value = ''
     }
 
@@ -693,8 +695,13 @@ decodeButton.addEventListener('click', button => {
     goesdecoder.performDecode()
 })
 
-
-
+const formatEditBox = document.getElementsByClassName("textarea_e")[0];
+formatEditBox.addEventListener("keyup",function(event) {
+    if (event.key === "Enter") {
+        //console.log("yo")
+        goesdecoder.performDecode()
+    }
+});
 
 
 }).call(this)}).call(this,require("buffer").Buffer)
